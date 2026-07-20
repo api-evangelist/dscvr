@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.dscvr.one/build/dscvr-api/
+docs: https://docs.dscvr.one/build/dscvr-api/
+summary:
+  types: [none]
+  note: >-
+    The DSCVR GraphQL API currently requires no authentication. Per the docs, "queries are made
+    with the permissions of a logged out user." The docs note that authentication and rate-limiting
+    may be introduced in the future to scale the API. There are no API keys, OAuth flows, or bearer
+    tokens at this time.
+schemes:
+- name: public
+  type: none
+  applied_to: https://api.dscvr.one/graphql
+  description: Unauthenticated public GraphQL endpoint; logged-out-user permission scope.
+canvas_note: >-
+  The DSCVR Canvas framework performs a postMessage handshake between an embedded iframe app and
+  the DSCVR host (via @dscvr-one/canvas-client-sdk); the host supplies the current user/content
+  context. This is a host-mediated trust model, not an API credential exchanged by the developer.
