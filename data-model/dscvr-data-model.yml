@@ -1,0 +1,59 @@
+generated: '2026-07-18'
+method: derived
+source: graphql/dscvr-graphql.graphql
+note: Entity-relationship graph derived from the introspected GraphQL object types and their fields.
+entities:
+- name: User
+  key: DscvrId
+  fields: [id, username, bio, followerCount, followingCount, postCount, iconUrl, createdAt, dscvrPoints, streak, wallets]
+- name: Portal
+  key: PortalId
+  fields: [id, name, slug, isNsfw, memberCount, postCount, createdAt, owner, description, iconUrl, coverPhoto, roles]
+- name: Content
+  key: ContentId
+  fields: [id, creator, body, contentType, portal]
+- name: Wallet
+  key: address
+  fields: [address, isPrimary, walletType, walletChainType]
+- name: Role
+  fields: [name]
+- name: ActiveStreak
+  fields: [dayCount, multiplierCount]
+- name: FrameMessage
+  fields: [content, user, url, timestamp, buttonIndex, inputText, state, address, transactionId]
+relationships:
+- from: Content
+  to: User
+  type: belongs_to
+  via: creator
+- from: Content
+  to: Portal
+  type: belongs_to
+  via: portal
+- from: Portal
+  to: User
+  type: belongs_to
+  via: owner
+- from: Portal
+  to: Role
+  type: has_many
+  via: roles
+- from: User
+  to: Wallet
+  type: has_many
+  via: wallets
+- from: User
+  to: ActiveStreak
+  type: has_one
+  via: streak
+- from: FrameMessage
+  to: Content
+  type: has_one
+  via: content
+- from: FrameMessage
+  to: User
+  type: has_one
+  via: user
+enums:
+  ContentType: [POST, COMMENT]
+  ContentReaction: [ANGRY, CARE, CLAP, DISLIKE, FIRE, HA_HA, LIKE, SAD, WOW]

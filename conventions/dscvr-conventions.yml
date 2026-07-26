@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.dscvr.one/build/dscvr-api/
+transport:
+  protocol: GraphQL over HTTP
+  endpoint: https://api.dscvr.one/graphql
+  method: POST
+  content_type: application/json
+  playground: https://api.dscvr.one/graphql
+authentication:
+  style: none
+  detail: Unauthenticated; logged-out-user permissions. See authentication/dscvr-authentication.yml
+idempotency:
+  supported: false
+  detail: >-
+    The API is read-only (a single Query type, no mutations), so all operations are naturally
+    idempotent and safe. No idempotency-key mechanism is documented or required.
+pagination:
+  supported: false
+  detail: >-
+    No cursor/offset pagination is exposed in the current schema. Queries fetch single entities
+    (user, content, portal) by id/name/slug; collection fields (roles, wallets) return full lists.
+caching:
+  detail: >-
+    Docs recommend disabling client-side caching for real-time accuracy of social data.
+error_envelope:
+  format: graphql-errors
+  detail: >-
+    Errors follow the GraphQL specification — a top-level "errors" array alongside partial "data".
+    This is not RFC 9457 problem+json.
+versioning:
+  scheme: schema-version
+  current: 0.1.0
+  stability: alpha
+  detail: See lifecycle/dscvr-lifecycle.yml
+rate_limiting:
+  signaled: false
+  detail: No rate-limit headers documented; docs note limits may be added in the future.
+cross_links:
+  authentication: authentication/dscvr-authentication.yml
+  lifecycle: lifecycle/dscvr-lifecycle.yml
+  data_model: data-model/dscvr-data-model.yml

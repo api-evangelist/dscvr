@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.dscvr.one/build/dscvr-canvas/
+note: >-
+  DSCVR Canvas and Frames are embeddable, client-side surfaces that render third-party mini-apps
+  directly inside the DSCVR social feed. These are host-embedded UI components distinct from the
+  server-side GraphQL API.
+families:
+- name: DSCVR Canvas
+  description: >-
+    Framework for embedding an interactive web app (iframe) into the DSCVR feed, communicating with
+    the DSCVR host over a postMessage RPC handshake for user/content context and wallet actions.
+  docs: https://docs.dscvr.one/build/dscvr-canvas/
+  loaders:
+  - "@dscvr-one/canvas-client-sdk"
+  - "@dscvr-one/canvas-wallet-adapter"
+  - "@dscvr-one/canvas-wallet-interface"
+  starter: "@dscvr-one/create-canvas-starter"
+- name: DSCVR Frames
+  description: >-
+    Open Frames-compatible interactive frames rendered inline in the feed, enabling buttons,
+    inputs, and transactions. Frame messages are verifiable via the GraphQL unpackFrameMessage query.
+  docs: https://docs.dscvr.one/build/dscvr-api/
+  standards:
+  - https://github.com/dscvr-one/open-frames-standard

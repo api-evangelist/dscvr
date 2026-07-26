@@ -1,0 +1,36 @@
+# DSCVR
+
+> DSCVR (pronounced "discover") is a Web3 social platform that blends a Web2-style social
+> experience with crypto-native ownership, monetization, and distribution. Users post inside
+> token-gated communities called Portals, earn DSCVR Points and streaks, and connect on-chain
+> wallets across Solana and the Internet Computer. Developers use a public GraphQL API over the
+> SocialFi graph plus the DSCVR Canvas / Frames framework to embed interactive mini-apps in the feed.
+
+## APIs
+
+- [DSCVR GraphQL API](https://docs.dscvr.one/build/dscvr-api/): Public GraphQL API over the SocialFi graph (endpoint https://api.dscvr.one/graphql). Query users, portals, content, wallets, reactions, and unpack Frame messages. Currently unauthenticated.
+
+## Specs
+
+- [GraphQL schema (SDL)](https://raw.githubusercontent.com/api-evangelist/dscvr/refs/heads/main/graphql/dscvr-graphql.graphql): Introspected schema — Query type with user, userByName, content, portalBySlug, portalById, unpackFrameMessage.
+- [GraphQL introspection (JSON)](https://raw.githubusercontent.com/api-evangelist/dscvr/refs/heads/main/graphql/dscvr-graphql-introspection.json)
+
+## SDKs & Packages
+
+- [@dscvr-one/dscvr-sdk](https://www.npmjs.com/package/@dscvr-one/dscvr-sdk): TypeScript SDK for the DSCVR platform.
+- [@dscvr-one/canvas-client-sdk](https://www.npmjs.com/package/@dscvr-one/canvas-client-sdk): Iframe app SDK to connect Canvas apps to the DSCVR host via postMessage RPC.
+- [@dscvr-one/canvas-wallet-adapter](https://www.npmjs.com/package/@dscvr-one/canvas-wallet-adapter): Canvas wallet bridge.
+- [@dscvr-one/create-canvas-starter](https://www.npmjs.com/package/@dscvr-one/create-canvas-starter): npx scaffolder for new Canvas apps.
+
+## Docs
+
+- [What is DSCVR?](https://docs.dscvr.one/): Documentation home.
+- [DSCVR API](https://docs.dscvr.one/build/dscvr-api/): GraphQL API guide and examples.
+- [Build a Canvas](https://docs.dscvr.one/build/dscvr-canvas/build-a-canvas): Canvas app getting-started guide.
+- [Canvas Client SDK](https://docs.dscvr.one/build/dscvr-canvas/canvas-client-sdk): Canvas SDK reference.
+
+## Optional
+
+- [GitHub org (dscvr-one)](https://github.com/dscvr-one)
+- [Blog](https://blog.dscvr.one/)
+- [Developer Discord](https://discord.gg/DX4CaFph3s)

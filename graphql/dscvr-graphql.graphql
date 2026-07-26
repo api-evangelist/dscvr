@@ -1,0 +1,108 @@
+type ActiveStreak {
+  dayCount: Int!
+  multiplierCount: Int!
+}
+
+type Content {
+  id: ContentId!
+  creator: User!
+  body: String!
+  contentType: ContentType!
+  portal: Portal!
+  userReaction(userId: DscvrId!): ContentReaction
+  hasUserCommented(userId: DscvrId!): Boolean
+}
+
+scalar ContentId
+
+enum ContentReaction {
+  ANGRY
+  CARE
+  CLAP
+  DISLIKE
+  FIRE
+  HA_HA
+  LIKE
+  SAD
+  WOW
+}
+
+enum ContentType {
+  POST
+  COMMENT
+}
+
+scalar DscvrId
+
+type FrameMessage {
+  content: Content
+  user: User!
+  url: String!
+  timestamp: Int!
+  buttonIndex: Int!
+  inputText: String
+  state: String!
+  address: String
+  transactionId: String
+}
+
+scalar NaiveDateTime
+
+type Portal {
+  id: PortalId!
+  name: String!
+  slug: String!
+  isNsfw: Boolean!
+  memberCount: Int!
+  postCount: Int!
+  createdAt: NaiveDateTime!
+  owner: User!
+  description: String!
+  iconUrl: String!
+  coverPhoto: String
+  roles: [Role!]!
+  isMember(id: DscvrId!): Boolean!
+}
+
+scalar PortalId
+
+type Query {
+  user(id: DscvrId!): User
+  userByName(name: String!): User
+  content(id: ContentId!): Content
+  unpackFrameMessage(message: String!): FrameMessage!
+  portalBySlug(slug: String!): Portal
+  portalById(id: PortalId!): Portal
+}
+
+type Role {
+  name: String!
+}
+
+scalar StringNumber
+
+type User {
+  id: DscvrId!
+  username: String!
+  bio: String!
+  followerCount: Int!
+  followingCount: Int!
+  postCount: Int!
+  iconUrl: String!
+  createdAt: NaiveDateTime!
+  dscvrPoints: StringNumber!
+  streak: ActiveStreak!
+  isFollower(userId: DscvrId!): Boolean!
+  isFollowing(userId: DscvrId!): Boolean!
+  wallets: [Wallet!]!
+  reactionForContent(contentId: ContentId!): ContentReaction
+  hasCommentedOnContent(contentId: ContentId!): Boolean
+  isPortalMember(portalId: PortalId!): Boolean!
+}
+
+type Wallet {
+  address: String!
+  isPrimary: Boolean!
+  walletType: String!
+  walletChainType: String!
+}

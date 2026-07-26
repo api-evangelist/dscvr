@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: graphql/dscvr-graphql.graphql
+note: >-
+  No official hosted/remote MCP server was found for DSCVR (checked docs, the dscvr-one GitHub
+  org, and MCP registries). This is a candidate tool list derived one-to-one from the public
+  GraphQL Query fields at https://api.dscvr.one/graphql (read-only, unauthenticated).
+server:
+  name: dscvr
+  transport: http
+tools:
+- name: get_user
+  description: Get a DSCVR user by their DscvrId.
+  source_operation: graphql/dscvr-graphql.graphql#Query.user
+- name: get_user_by_name
+  description: Get a DSCVR user by username, including follower/following counts, points, and streak.
+  source_operation: graphql/dscvr-graphql.graphql#Query.userByName
+- name: get_content
+  description: Get a content item (post or comment) by ContentId, including creator and portal.
+  source_operation: graphql/dscvr-graphql.graphql#Query.content
+- name: get_portal_by_slug
+  description: Get a portal (community) by its slug.
+  source_operation: graphql/dscvr-graphql.graphql#Query.portalBySlug
+- name: get_portal_by_id
+  description: Get a portal (community) by its PortalId.
+  source_operation: graphql/dscvr-graphql.graphql#Query.portalById
+- name: unpack_frame_message
+  description: Decode a signed DSCVR Frame message into its content, user, button, and state fields.
+  source_operation: graphql/dscvr-graphql.graphql#Query.unpackFrameMessage

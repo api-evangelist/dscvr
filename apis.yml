@@ -1,7 +1,12 @@
 aid: dscvr
 name: DSCVR
-description: 'DSCVR is a company surfaced as a portfolio company of polychain and added to the API Evangelist
-  network as a stub for enrichment. Sector: social. This profile is a lead awaiting the enrichment pipeline.'
+description: "DSCVR (pronounced \"discover\") is a Web3 social platform that blends a Web2-style\
+  \ social experience with crypto-native ownership, monetization, and distribution. Users post and\
+  \ interact inside token-gated communities called Portals, earn DSCVR Points and daily streaks, and\
+  \ connect on-chain wallets across Solana and the Internet Computer. For developers, DSCVR exposes a\
+  \ public GraphQL API over its SocialFi graph — users, portals, content, wallets, reactions,\
+  \ and frame messages — alongside the DSCVR Canvas / Frames framework for embedding interactive\
+  \ mini-apps directly into the social feed, all backed by first-party TypeScript SDKs."
 url: https://raw.githubusercontent.com/api-evangelist/dscvr/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,18 +14,103 @@ x-backed-by:
 - polychain
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Social
-apis: []
+- Web3
+- GraphQL
+- Blockchain
+- Solana
+- Internet Computer
+- SocialFi
+- Social Graph
+- Developer Platform
+image: https://dscvr.one/favicon.ico
+apis:
+- name: DSCVR API
+  description: "Public GraphQL API over DSCVR's SocialFi graph. Query users (by id or username), portals\
+    \ (by id or slug), content (posts and comments), on-chain wallets, reactions, and unpack Frame\
+    \ messages. Currently unauthenticated — queries run with logged-out-user permissions."
+  humanURL: https://docs.dscvr.one/build/dscvr-api/
+  baseURL: https://api.dscvr.one/graphql
+  properties:
+  - type: GraphQL
+    url: graphql/dscvr-graphql.graphql
+  - type: Documentation
+    url: https://docs.dscvr.one/build/dscvr-api/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/dscvr-domain-security.yml
 - type: Website
   url: https://dscvr.one
+- type: DeveloperPortal
+  url: https://docs.dscvr.one/
+- type: Documentation
+  url: https://docs.dscvr.one/
+- type: APIReference
+  url: https://docs.dscvr.one/build/dscvr-api/
+- type: GettingStarted
+  url: https://docs.dscvr.one/build/dscvr-canvas/build-a-canvas
+- type: Blog
+  url: https://blog.dscvr.one/
+- type: GitHubOrganization
+  url: https://github.com/dscvr-one
+- type: Support
+  url: https://discord.gg/DX4CaFph3s
+- type: SignUp
+  url: https://dscvr.one/
+- type: GraphQL
+  url: graphql/dscvr-graphql.graphql
+- type: Packages
+  url: packages/dscvr-packages.yml
+- type: SDKs
+  url: packages/dscvr-packages.yml
+- type: CLI
+  url: cli/dscvr-cli.yml
+- type: Components
+  url: components/dscvr-components.yml
+- type: Sandbox
+  url: sandbox/dscvr-sandbox.yml
+- type: MCPServer
+  url: mcp/dscvr-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/dscvr-llms.txt
+- type: Authentication
+  url: authentication/dscvr-authentication.yml
+- type: Conventions
+  url: conventions/dscvr-conventions.yml
+- type: DataModel
+  url: data-model/dscvr-data-model.yml
+- type: Conformance
+  url: conformance/dscvr-conformance.yml
+- type: Lifecycle
+  url: lifecycle/dscvr-lifecycle.yml
+- type: WellKnown
+  url: well-known/dscvr-well-known.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

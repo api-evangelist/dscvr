@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.npmjs.com/org/dscvr-one
+packages:
+- language: javascript
+  registry: npm
+  name: "@dscvr-one/dscvr-sdk"
+  version: 1.0.6
+  url: https://www.npmjs.com/package/@dscvr-one/dscvr-sdk
+  install: npm install @dscvr-one/dscvr-sdk
+  description: TypeScript SDK to facilitate interaction with the DSCVR platform.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@dscvr-one/canvas-client-sdk"
+  version: 2.0.0
+  url: https://www.npmjs.com/package/@dscvr-one/canvas-client-sdk
+  install: npm install @dscvr-one/canvas-client-sdk
+  description: SDK for iframe apps to connect to the DSCVR host using postMessage RPC (Canvas apps).
+  official: true
+- language: javascript
+  registry: npm
+  name: "@dscvr-one/canvas-wallet-adapter"
+  version: 1.0.2
+  url: https://www.npmjs.com/package/@dscvr-one/canvas-wallet-adapter
+  install: npm install @dscvr-one/canvas-wallet-adapter
+  description: Custom canvas wallet bridging the canvas client SDK to a wallet provider.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@dscvr-one/canvas-wallet-interface"
+  version: 1.0.2
+  url: https://www.npmjs.com/package/@dscvr-one/canvas-wallet-interface
+  install: npm install @dscvr-one/canvas-wallet-interface
+  description: TypeScript types for custom canvas wallet adapters to interact with the DSCVR host.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@dscvr-one/create-canvas-starter"
+  version: 1.0.2
+  url: https://www.npmjs.com/package/@dscvr-one/create-canvas-starter
+  install: npx @dscvr-one/create-canvas-starter
+  description: npx scaffolder that clones from the DSCVR canvas examples to start a new Canvas app.
+  official: true
+  role: cli

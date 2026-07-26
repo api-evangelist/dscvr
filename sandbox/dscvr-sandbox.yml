@@ -1,0 +1,17 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.dscvr.one/build/dscvr-api/
+note: >-
+  DSCVR does not publish a separate test/live environment with test credentials (the API is
+  unauthenticated and read-only against production social data). The developer-facing sandbox is
+  the interactive GraphQL playground served at the API endpoint itself.
+playground:
+  url: https://api.dscvr.one/graphql
+  type: graphql-playground
+  detail: >-
+    Open the endpoint in a browser to explore the schema, run queries interactively, and download
+    the GraphQL schema. Queries run with logged-out-user permissions against live data.
+test_values: []
+test_environment:
+  separate: false
+  detail: No test-vs-live key separation; single public production endpoint.

@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: derived
+source: graphql/dscvr-graphql.graphql
+standards:
+- id: graphql
+  conforms: true
+  evidence: Public GraphQL endpoint at https://api.dscvr.one/graphql with a valid introspectable schema.
+- id: graphql-introspection
+  conforms: true
+  evidence: __schema introspection query returns a full type system (HTTP 200).
+- id: oauth2
+  conforms: false
+  evidence: No OAuth2 flows; API is unauthenticated.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use the GraphQL top-level errors[] array, not application/problem+json.
+- id: rest
+  conforms: false
+  evidence: API is GraphQL, not REST/OpenAPI.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: No valid /.well-known/security.txt served (SPA shell only).

@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.npmjs.com/package/@dscvr-one/create-canvas-starter
+name: create-canvas-starter
+kind: project-scaffolder
+detail: >-
+  DSCVR does not ship a general-purpose API management CLI. Its first-party command-line tool is
+  an npx scaffolder that bootstraps a new DSCVR Canvas application by cloning from the official
+  canvas examples.
+install:
+- method: npx
+  command: npx @dscvr-one/create-canvas-starter
+binary: package @dscvr-one/create-canvas-starter (see packages/dscvr-packages.yml)
+commands:
+- name: create-canvas-starter
+  description: Scaffold a new DSCVR Canvas app from the official examples repository.

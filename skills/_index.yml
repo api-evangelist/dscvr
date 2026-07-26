@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: generated
+source: graphql/dscvr-graphql.graphql
+skills:
+- file: dscvr-lookup-user-profile.md
+  name: Look up a DSCVR user profile and social graph
+  api: graphql/dscvr-graphql.graphql
+  operations: [userByName, user]
+- file: dscvr-inspect-portal-and-content.md
+  name: Inspect a DSCVR portal and its content
+  api: graphql/dscvr-graphql.graphql
+  operations: [portalBySlug, portalById, content]
+- file: dscvr-verify-frame-message.md
+  name: Verify and decode a DSCVR Frame message
+  api: graphql/dscvr-graphql.graphql
+  operations: [unpackFrameMessage]

@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of /.well-known/ on DSCVR hosts
+note: >-
+  The API host api.dscvr.one returns 404 for every probed /.well-known path. The website
+  dscvr.one returns HTTP 200 for these paths but serves the SPA index.html shell (not a real
+  well-known document), so none were saved as artifacts. No genuine well-known discovery
+  documents are published.
+hosts:
+- host: https://api.dscvr.one
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://dscvr.one
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: SPA shell (index.html), not a real security.txt — not saved
+  - path: /.well-known/api-catalog
+    status: 200
+    note: SPA shell (index.html), not a real api-catalog — not saved
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: SPA shell (index.html), not a real ai-plugin manifest — not saved
