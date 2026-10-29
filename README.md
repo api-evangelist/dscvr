@@ -64,6 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-DSCVR is a company surfaced as a portfolio company of polychain and added to the API Evangelist network as a stub for enrichment. Sector: social. This profile is a lead awaiting the enrichment pipeline.
+DSCVR (pronounced "discover") is a Web3 social platform that blends a Web2-style social experience with crypto-native ownership, monetization, and distribution. Users post and interact inside token-gated communities called Portals, earn DSCVR Points and daily streaks, and connect on-chain wallets across Solana and the Internet Computer. For developers, DSCVR exposes a public GraphQL API over its SocialFi graph — users, portals, content, wallets, reactions, and frame messages — alongside the DSCVR Canvas / Frames framework for embedding interactive mini-apps directly into the social feed, all backed by first-party TypeScript SDKs.
 
-Backed by: polychain — https://dscvr.one
+**Areas:** Company · Social · Web3 · GraphQL · Blockchain · Solana · Internet Computer · SocialFi · Social Graph · Developer Platform
+
+## DSCVR on APIs.io
+
+Everything profiled for DSCVR is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dscvr/](https://apis.io/providers/dscvr/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [DSCVR API](https://apis.io/apis/dscvr/dscvr-api/) — Public GraphQL API over DSCVR's SocialFi graph. Query users (by id or username), portals (by id or slug), content (posts and comments), on-chain wallets,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [dscvr](https://apis.io/servers/dscvr/dscvr/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Dscvr Authentication](https://apis.io/security/dscvr/dscvr-authentication/)
+- [Dscvr Domain Security](https://apis.io/security/dscvr/dscvr-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://dscvr.one)
+- [Documentation](https://docs.dscvr.one/)
+- [Getting started](https://docs.dscvr.one/build/dscvr-canvas/build-a-canvas)
+- [API reference](https://docs.dscvr.one/build/dscvr-api/)
+- [Sign up](https://dscvr.one/)
+- [Support](https://discord.gg/DX4CaFph3s)
+- [Blog](https://blog.dscvr.one/)
+- [GitHub](https://github.com/dscvr-one)
+
+## API Evangelist rating
+
+**Kin Score 32.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 29.8 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 80.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 16.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dscvr/](https://apis.io/providers/dscvr/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DSCVR: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dscvr/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
